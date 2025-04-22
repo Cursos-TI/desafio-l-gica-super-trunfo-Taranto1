@@ -182,8 +182,8 @@ int main() {
     printf("\n\n");
     // comparando resultados
     printf("Comparando atributo 'Densidade Populacional':\n");
-    printf("Carta 1 - %s (%c): %.2f\n", cidade_01, Estado_01, densidade_cidade_01);
-    printf("Carta 2 - %s (%c): %.2f\n", cidade_02, Estado_02, densidade_cidade_02);
+    printf("Carta 1 - %s (%c): %.2f hab/km²\n", cidade_01, Estado_01, densidade_cidade_01);
+    printf("Carta 2 - %s (%c): %.2f hab/km²\n", cidade_02, Estado_02, densidade_cidade_02);
 
     if (densidade_cidade_01 < densidade_cidade_02)
     {
