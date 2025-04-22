@@ -40,8 +40,8 @@ int main() {
     // PIB per capta
     float PIB_per_capita_01, PIB_per_capita_02;
     
-    // Armazenador de resultados
-    int resultados[7];
+    /*// Armazenador de resultados
+    int resultados[7];*/ // código antigo
    
     // atributo "super poder"
     double superPoder_cid_01, superPoder_cid_02;
@@ -170,17 +170,31 @@ int main() {
     superPoder_cid_01 = populacao_cid_01 + area_cid_01 + PIB_cid_01 + ponto_turistico_cid_01 + PIB_per_capita_01 + (1 / densidade_cidade_01);
     superPoder_cid_02 = populacao_cid_02 + area_cid_02 + PIB_cid_02 + ponto_turistico_cid_02 + PIB_per_capita_02 + (1 / densidade_cidade_02);
 
-    // comparando resultados
+    /*// comparando resultados (código antigo)
     resultados[0] = (populacao_cid_01 > populacao_cid_02 ? 1 : 2);
     resultados[1] = (area_cid_01 > area_cid_02 ? 1 : 2);
     resultados[2] = (PIB_cid_01 > PIB_cid_02 ? 1 : 2);
     resultados[3] = (ponto_turistico_cid_01 > ponto_turistico_cid_02 ? 1 : 2);
     resultados[4] = (densidade_cidade_01 < densidade_cidade_02 ? 1 : 2); // inverte a comparação, uma vez que, quanto menor melhor
     resultados[5] = (PIB_per_capita_01 > PIB_per_capita_02 ? 1 : 2);
-    resultados[6] = (superPoder_cid_01 > superPoder_cid_02 ? 1 : 2);
+    resultados[6] = (superPoder_cid_01 > superPoder_cid_02 ? 1 : 2);*/
 
     printf("\n\n");
-    // exibindo vencedor
+    // comparando resultados
+    printf("Comparando atributo 'Densidade Populacional':\n");
+    printf("Carta 1 - %s (%c): %.2f\n", cidade_01, Estado_01, densidade_cidade_01);
+    printf("Carta 2 - %s (%c): %.2f\n", cidade_02, Estado_02, densidade_cidade_02);
+
+    if (densidade_cidade_01 < densidade_cidade_02)
+    {
+        printf("Vendedor: Carta 1 (%s)\n", cidade_01);
+    } else {
+        printf("Vencedor: Carta 2 (%s)\n", cidade_02);
+    }
+    
+
+   /* printf("\n\n");
+    // exibindo vencedor (código antigo)
 
     printf("População - vencedor: Carta %d\n", resultados[0]);
     printf("Área - vencedor: Carta %d\n", resultados[1]);
@@ -188,7 +202,7 @@ int main() {
     printf("Pontos Turísticos - vencedor: Carta %d\n", resultados[3]);
     printf("Densisade Populacional - vencedor: Carta %d\n", resultados[4]);
     printf("PIB per Capita - vencedor: Carta %d\n", resultados[5]);
-    printf("Super Poder - vencedor: Carta %d\n", resultados[6]);
+    printf("Super Poder - vencedor: Carta %d\n", resultados[6]);*/
 
     
     return 0;
